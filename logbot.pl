@@ -20,7 +20,7 @@ use constant {
 	UDP_PORT	=> '8675',
 	DEFAULT_CHANNEL => '#foo',
 
-	DB_DSN		=> "DBI:mysql:database=logbot;host=localhost;port=3306";
+	DB_DSN		=> "DBI:mysql:database=logbot;host=localhost;port=3306",
 	DB_USER		=> 'root',
 	DB_PASS		=> 'password',
 };
