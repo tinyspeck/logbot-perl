@@ -15,7 +15,7 @@ use constant {
 	IRC_NICKNAME	=> 'logbot',
 	IRC_SERVER_HOST	=> 'irc.company.com',
 	IRC_SERVER_PASS	=> undef,
-	IRC_CHANNELS	=> qw( #foo #bar ),
+	IRC_CHANNELS	=> [qw( #foo #bar )],
 
 	UDP_PORT	=> '8675',
 	DEFAULT_CHANNEL => '#foo',
@@ -79,7 +79,7 @@ sub _start {
 	);
 
 	$irc->plugin_add('AutoJoin', POE::Component::IRC::Plugin::AutoJoin->new(
-		Channels => [ IRC_CHANNELS ]
+		Channels =>  IRC_CHANNELS 
 	));
 
 	$irc->yield(register => qw(
